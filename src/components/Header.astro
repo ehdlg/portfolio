@@ -1,0 +1,44 @@
+---
+type NavElement = {
+  href: string;
+  text: string;
+};
+
+const NAV_ELEMENTS: NavElement[] = [
+  {
+    href: "/",
+    text: "Inicio",
+  },
+  {
+    href: "projects",
+    text: "Proyectos",
+  },
+  {
+    href: "about",
+    text: "Sobre mí",
+  },
+  {
+    href: "/contact",
+    text: "Contacto",
+  },
+];
+---
+
+<header class="sticky top-0 z-50 my-10 flex w-full justify-between p-4">
+  <h1
+    class="inline-block cursor-pointer bg-gradient-to-r from-indigo-500 to-indigo-400 bg-clip-text text-center text-xl font-bold text-transparent"
+  >
+    ehdlg
+  </h1>
+  <nav>
+    <ul class="flex gap-x-8">
+      {
+        NAV_ELEMENTS.map((element) => (
+          <li class="text-neutral-800 dark:text-neutral-200">
+            <a href={element.href}>{element.text}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
