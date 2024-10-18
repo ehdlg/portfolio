@@ -1,0 +1,26 @@
+---
+import LinkedInIcon from "@icons/LinkedIn.astro";
+import GitHubIcon from "@icons/GitHub.astro";
+import SocialLink from "./SocialLink.astro";
+
+import {
+  github as githubLink,
+  linkedin as linkedinLink,
+} from "@data/links.json";
+
+const CURRENT_YEAR = new Date().getFullYear();
+---
+
+<footer
+  class="flex w-full justify-between py-8 text-lg text-neutral-600 dark:text-neutral-400"
+>
+  <span>Enrique Hidalgo - {CURRENT_YEAR}</span>
+  <div class="flex">
+    <SocialLink href={linkedinLink}>
+      <LinkedInIcon class="size-7" />
+    </SocialLink>
+    <SocialLink href={githubLink}>
+      <GitHubIcon class="size-7" />
+    </SocialLink>
+  </div>
+</footer>
