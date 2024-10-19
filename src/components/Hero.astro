@@ -11,9 +11,11 @@ import {
 } from "@data/links.json";
 ---
 
-<article>
-  <div class="flex items-center gap-x-2 text-neutral-700 dark:text-neutral-300">
-    <h2 class="mb-6 text-5xl font-bold">¡Hola! 👋</h2>
+<section>
+  <div
+    class="mb-6 flex items-center gap-x-2 text-neutral-700 dark:text-neutral-300"
+  >
+    <h2 class="text-5xl font-bold">¡Hola! 👋</h2>
     <Badge href={linkedinLink}>Disponible para trabajar</Badge>
   </div>
   <div class="text-lg leading-loose">
@@ -35,4 +37,4 @@ import {
     </SocialLink>
     <SocialLink href={mailLink}><MailIcon class="size-7" /></SocialLink>
   </div>
-</article>
+</section>
