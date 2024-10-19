@@ -1,13 +1,17 @@
 ---
 import Badge from "./elements/Badge.astro";
-import { linkedin as linkedinLink } from "@data/links.json";
+import SocialLink from "./elements/SocialLink.astro";
+import GitHubIcon from "@icons/GitHub.astro";
+import LinkedInIcon from "@icons/LinkedIn.astro";
+import {
+  linkedin as linkedinLink,
+  github as githubLink,
+} from "@data/links.json";
 ---
 
 <article>
-  <div class="flex items-center gap-x-2">
-    <h2 class="mb-6 text-5xl font-bold text-neutral-700 dark:text-neutral-300">
-      ¡Hola! 👋
-    </h2>
+  <div class="flex items-center gap-x-2 text-neutral-700 dark:text-neutral-300">
+    <h2 class="mb-6 text-5xl font-bold">¡Hola! 👋</h2>
     <Badge href={linkedinLink}>Disponible para trabajar</Badge>
   </div>
   <div class="text-lg leading-loose">
@@ -19,5 +23,13 @@ import { linkedin as linkedinLink } from "@data/links.json";
       usuario y desarrollo de videojuegos.
     </p>
     <p>Valoro la constancia, la curiosidad y el aprendizaje continuo.</p>
+  </div>
+  <div class="mt-2 flex">
+    <SocialLink href={linkedinLink}>
+      <LinkedInIcon class="size-7" />
+    </SocialLink>
+    <SocialLink href={githubLink}>
+      <GitHubIcon class="size-7" />
+    </SocialLink>
   </div>
 </article>
