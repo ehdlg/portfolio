@@ -1,7 +1,15 @@
+---
+import Badge from "./elements/Badge.astro";
+import { linkedin as linkedinLink } from "@data/links.json";
+---
+
 <article>
-  <h2 class="mb-6 text-5xl font-bold text-neutral-700 dark:text-neutral-300">
-    ¡Hola! 👋
-  </h2>
+  <div class="flex items-center gap-x-2">
+    <h2 class="mb-6 text-5xl font-bold text-neutral-700 dark:text-neutral-300">
+      ¡Hola! 👋
+    </h2>
+    <Badge href={linkedinLink}>Disponible para trabajar</Badge>
+  </div>
   <div class="text-lg leading-loose">
     <p>
       Soy <b>Enrique</b>, desarrollador web de Granada.
