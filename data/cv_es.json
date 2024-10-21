@@ -1,0 +1,118 @@
+{
+  "selectedTemplate": 6,
+  "headings": {
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "awards": "",
+    "education": "Educación",
+    "work": "Experiencia"
+  },
+  "basics": {
+    "name": "Enrique Hidalgo Pérez",
+    "email": "enriqueh147@gmail.com",
+    "location": {
+      "address": "Granada, ES"
+    },
+    "website": "github.com/ehdlg"
+  },
+  "education": [
+    {
+      "location": "Granada, ES",
+      "startDate": "Sept 2021",
+      "endDate": "Jun 2024",
+      "institution": "IES Aguadulce",
+      "area": "CFGS - Desarollo de Aplicaciones Web"
+    },
+    {
+      "institution": "Universidad de Granada",
+      "location": "Granada, ES",
+      "area": "Psicología",
+      "startDate": "Sep 2017",
+      "endDate": "Sep 2021"
+    }
+  ],
+  "work": [
+    {
+      "location": "Granada, ES",
+      "website": "",
+      "startDate": "Nov 2023",
+      "endDate": "Feb 2024",
+      "highlights": [
+        "Desempeñé un papel clave en el desarrollo de una aplicación web desde cero con React y TypeScript, creando una herramienta Pomodoro para mejorar la gestión del tiempo.",
+        "Diseñé y ejecuté estrategias de testing robustas, garantizando la fiabilidad y el rendimiento mediante test unitarios, de integración y E2E (Vitest, Playwright, React Testing Library)",
+        "Utilicé Astro, Tailwind CSS, Docker, Storybook, Vitest y Playwright, creando un entorno de prueba para experimentar y aprender nuevas herramientas que optimizaron el desarrollo y mejoraron la calidad del proyecto."
+      ],
+      "company": "Aircury",
+      "position": "Desarollador Frontend Prácticas"
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": ["JavaScript", "TypeScript", "HTML/CSS", "Java"],
+      "name": "Lenguajes de Programación"
+    },
+    {
+      "keywords": ["React", "Angular", "Express", "Astro", "Spring Boot"],
+      "name": "Frameworks/Bibliotecas"
+    },
+    {
+      "keywords": [
+        "Docker",
+        "Jest/Vitest",
+        "Playwright",
+        "Tailwind CSS",
+        "Storybook",
+        "Sequelize",
+        "Git"
+      ],
+      "name": "Herramientas y Tecnologías"
+    },
+    {
+      "keywords": ["MySQL", "PostgreSQL", "SQLite", "MongoDB"],
+      "name": "Bases de Datos"
+    },
+    {
+      "keywords": ["Español - Nativo", "Inglés - B2"],
+      "name": "Idiomas"
+    }
+  ],
+  "projects": [
+    {
+      "url": "https://github.com/ehdlg/tienlocal",
+      "keywords": ["Node", "Express", "React", "JWT", "SQL"],
+      "name": "TienLocal",
+      "description": "Aplicación para fomentar el comercio local, con backend en Node y Express, autenticación JWT y frontend en React. Permite interacciones entre empresas y usuarios."
+    },
+    {
+      "keywords": [
+        "TypeScript",
+        "Express",
+        "React",
+        "Sequelize",
+        "SQLite",
+        "TailwindCSS"
+      ],
+      "name": "Notas de entrega",
+      "description": "Herramienta para gestionar notas de entrega en un negocio familiar.",
+      "url": "https://github.com/ehdlg/delivery-notes"
+    }
+  ],
+  "awards": [
+    {
+      "title": "",
+      "date": "",
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "work",
+    "education",
+    "skills",
+    "projects",
+    "awards"
+  ]
+}
