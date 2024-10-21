@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  stack: string[];
+}
+const { title, description, stack } = Astro.props;
+---
+
+<div
+  class="flex h-[200px] cursor-pointer flex-col justify-around rounded border border-neutral-200 p-4 shadow-sm transition duration-300 ease-linear hover:border-neutral-300 dark:border-neutral-800 hover:dark:border-neutral-600"
+>
+  <h4 class="text-xl font-bold">{title}</h4>
+  <p>{description}</p>
+  <div class="flex gap-x-2 text-sm">
+    {stack.map((tech) => <span>{tech}</span>)}
+  </div>
+</div>
