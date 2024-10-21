@@ -80,9 +80,10 @@
   "projects": [
     {
       "url": "https://github.com/ehdlg/tienlocal",
-      "keywords": ["Node", "Express", "React", "JWT", "SQL"],
+      "keywords": ["Node", "Express", "React", "JWT", "MySQL"],
       "name": "TienLocal",
-      "description": "Aplicación para fomentar el comercio local, con backend en Node y Express, autenticación JWT y frontend en React. Permite interacciones entre empresas y usuarios."
+      "description": "Proyecto de simulación de comercio  que fomenta negocios y empresas locales. Permite a empresas registrarse y subir productos, mientras los usuarios pueden explorar y comprar",
+      "finished": true
     },
     {
       "keywords": [
@@ -91,11 +92,36 @@
         "React",
         "Sequelize",
         "SQLite",
-        "TailwindCSS"
+        "Tailwind"
       ],
       "name": "Notas de entrega",
       "description": "Herramienta para gestionar notas de entrega en un negocio familiar.",
+      "finished": true,
       "url": "https://github.com/ehdlg/delivery-notes"
+    },
+    {
+      "name": "groc",
+      "description": "Proyecto diseñado para ayudar a los usuarios a manejar su tiempo con la técnica pomodoro.",
+      "finished": false,
+      "keywords": [
+        "TypeScript",
+        "Astro",
+        "React",
+        "Tailwind",
+        "Docker",
+        "Storybook",
+        "Vitest",
+        "Playwright",
+        "CI/CD"
+      ],
+      "url": "https://github.com/sergih28/groc"
+    },
+    {
+      "name": "shrinker",
+      "description": "URL shortening service",
+      "keywords": ["Angular", "Express", "Node", "SQLite", "Tailwind"],
+      "finished": true,
+      "url": "https://github.com/ehdlg/shrlinker"
     }
   ],
   "awards": [
