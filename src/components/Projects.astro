@@ -4,21 +4,23 @@ import { projects } from "@data/cv_es.json";
 ---
 
 <section>
-  <h3
+  <h2
     class="mb-6 text-3xl font-semibold text-neutral-700 dark:text-neutral-300"
   >
     Proyectos
-  </h3>
+  </h2>
 
   <article
     class="grid auto-cols-fr grid-cols-1 place-content-center gap-4 px-2 md:grid-cols-2"
   >
     {
-      projects.map(({ name, description, keywords }) => (
+      projects.map(({ name, description, keywords, url, finished }) => (
         <ProjectDetails
           title={name}
           description={description}
           stack={keywords}
+          url={url}
+          finished={finished}
         />
       ))
     }
