@@ -1,0 +1,26 @@
+---
+import ProjectDetails from "@components/ProjectDetails.astro";
+import { projects } from "@data/cv_es.json";
+---
+
+<section>
+  <h3
+    class="mb-6 text-2xl font-semibold text-neutral-700 dark:text-neutral-300"
+  >
+    Projects
+  </h3>
+
+  <article
+    class="grid auto-cols-fr grid-cols-1 place-content-center gap-4 px-2 md:grid-cols-2"
+  >
+    {
+      projects.map(({ name, description, keywords }) => (
+        <ProjectDetails
+          title={name}
+          description={description}
+          stack={keywords}
+        />
+      ))
+    }
+  </article>
+</section>
