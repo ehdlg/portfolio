@@ -1,18 +1,31 @@
 ---
+import TechBadge from "@components/elements/TechBadge.astro";
+import InProgressBadge from "./elements/InProgressBadge.astro";
+
 interface Props {
   title: string;
   description: string;
   stack: string[];
+  url: string;
+  finished: boolean;
 }
-const { title, description, stack } = Astro.props;
+const { title, description, stack, url, finished } = Astro.props;
 ---
 
-<div
-  class="flex h-[200px] cursor-pointer flex-col justify-around rounded border border-neutral-200 p-4 shadow-sm transition duration-300 ease-linear hover:border-neutral-300 dark:border-neutral-800 hover:dark:border-neutral-600"
->
-  <h4 class="text-xl font-bold">{title}</h4>
-  <p>{description}</p>
-  <div class="flex gap-x-2 text-sm">
-    {stack.map((tech) => <span>{tech}</span>)}
+<a href={url} target="_blank">
+  <div
+    class="flex h-[200px] flex-col flex-wrap rounded border border-neutral-200 p-4 shadow-sm transition duration-200 ease-linear hover:border-indigo-400 dark:border-neutral-800"
+  >
+    <div class="mb-2 flex items-center justify-between gap-x-4">
+      <h4 class="text-xl font-bold text-neutral-700 dark:text-neutral-300">
+        {title}
+      </h4>
+      {!finished && <InProgressBadge />}
+    </div>
+
+    <p class="mb-auto text-neutral-600 dark:text-neutral-400">{description}</p>
+    <div class="flex flex-wrap gap-2 justify-self-end">
+      {stack.map((tech) => <TechBadge>{tech}</TechBadge>)}
+    </div>
   </div>
-</div>
+</a>
