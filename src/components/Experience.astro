@@ -1,0 +1,8 @@
+---
+import { work as EXPERIENCE } from "@data/cv_es.json";
+import ExperienceDetails from "./ExperienceDetails.astro";
+---
+
+<ol class="relative border-s border-neutral-200 dark:border-neutral-800">
+  {EXPERIENCE.map((work) => <ExperienceDetails {...work} />)}
+</ol>
