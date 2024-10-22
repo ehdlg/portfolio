@@ -1,4 +1,14 @@
-<span
-  class="me-2 rounded border border-indigo-400 bg-indigo-100 px-2.5 py-0.5 text-sm font-medium text-indigo-800 dark:bg-gray-700 dark:text-indigo-400"
-  ><slot />
-</span>
+---
+interface Props {
+  href: string;
+  ariaLabel?: string;
+}
+const { href, ariaLabel } = Astro.props;
+---
+
+<a href={href} target="_blank" aria-label={ariaLabel}>
+  <span
+    class="me-2 rounded border border-indigo-400 bg-indigo-100 px-2.5 py-0.5 text-sm font-medium text-indigo-800 dark:bg-gray-700 dark:text-indigo-400"
+    ><slot />
+  </span>
+</a>
