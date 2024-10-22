@@ -14,16 +14,20 @@ const { title, description, stack, url, finished } = Astro.props;
 
 <a href={url} target="_blank">
   <div
-    class="flex h-[200px] flex-col flex-wrap rounded border border-neutral-200 p-4 shadow-sm transition duration-200 ease-linear hover:border-indigo-400 dark:border-neutral-800"
+    class="flex min-h-[300px] flex-col flex-wrap gap-y-2 rounded border border-neutral-200 p-4 shadow-sm transition duration-200 ease-linear hover:border-indigo-400 md:min-h-[200px] md:gap-0 dark:border-neutral-800"
   >
     <div class="mb-2 flex items-center justify-between gap-x-4">
-      <h4 class="text-xl font-bold text-neutral-700 dark:text-neutral-300">
+      <h4 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
         {title}
       </h4>
       {!finished && <InProgressBadge />}
     </div>
 
-    <p class="mb-auto text-neutral-600 dark:text-neutral-400">{description}</p>
+    <p
+      class="text-normal mb-auto text-neutral-600 md:text-sm dark:text-neutral-400"
+    >
+      {description}
+    </p>
     <div class="flex flex-wrap gap-2 justify-self-end">
       {stack.map((tech) => <TechBadge>{tech}</TechBadge>)}
     </div>
