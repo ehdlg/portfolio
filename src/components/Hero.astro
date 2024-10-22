@@ -29,12 +29,22 @@ import {
     <p>Valoro la constancia, la curiosidad y el aprendizaje continuo.</p>
   </div>
   <div class="mt-2 flex items-center gap-x-1">
-    <SocialLink href={linkedinLink}>
+    <SocialLink
+      href={linkedinLink}
+      ariaLabel="Ir al LinkedIn de Enrique Hidalgo"
+    >
       <LinkedInIcon class="size-7" />
     </SocialLink>
-    <SocialLink href={githubLink}>
+    <SocialLink
+      href={githubLink}
+      ariaLabel="Ir a la página de GitHub de Enrique Hidalgo"
+    >
       <GitHubIcon class="size-7" />
     </SocialLink>
-    <SocialLink href={mailLink}><MailIcon class="size-7" /></SocialLink>
+    <SocialLink
+      href={mailLink}
+      ariaLabel="Enviar un correo electrónico a Enrique Hidalgo"
+      ><MailIcon class="size-7" /></SocialLink
+    >
   </div>
 </section>
