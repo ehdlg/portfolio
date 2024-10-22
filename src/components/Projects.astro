@@ -1,17 +1,25 @@
 ---
 import ProjectDetails from "@components/ProjectDetails.astro";
+import GitHubIcon from "@/icons/GitHub.astro";
 import { projects } from "@data/cv_es.json";
+import { repositories as repositoriesLink } from "@data/links.json";
 ---
 
-<section>
-  <h2
-    class="mb-6 text-3xl font-semibold text-neutral-700 dark:text-neutral-300"
-  >
-    Proyectos
-  </h2>
+<section class="px-2">
+  <div class="mb-4 flex items-center justify-between">
+    <h2 class="text-3xl font-semibold text-neutral-700 dark:text-neutral-300">
+      Proyectos
+    </h2>
+    <a
+      href={repositoriesLink}
+      target="_blank"
+      class="flex items-center justify-center gap-x-2 text-neutral-600 transition duration-150 ease-in hover:text-neutral-900 dark:text-neutral-400 hover:dark:text-neutral-200"
+      >Más en <GitHubIcon class="size-4" />
+    </a>
+  </div>
 
   <article
-    class="grid auto-cols-fr grid-cols-1 place-content-center gap-4 px-2 md:grid-cols-2"
+    class="grid auto-cols-fr grid-cols-1 place-content-center gap-4 md:grid-cols-2"
   >
     {
       projects.map(({ name, description, keywords, url, finished }) => (
