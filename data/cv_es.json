@@ -112,6 +112,7 @@
         "Storybook",
         "Vitest",
         "Playwright",
+        "i18n",
         "CI/CD"
       ],
       "url": "https://github.com/sergih28/groc"
