@@ -117,7 +117,7 @@
       "url": "https://github.com/sergih28/groc"
     },
     {
-      "name": "shrinker",
+      "name": "shrlinker",
       "description": "Servicio de acortamiento de URLs",
       "keywords": ["Angular", "Express", "Node", "SQLite", "Tailwind"],
       "finished": true,
