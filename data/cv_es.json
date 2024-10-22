@@ -132,9 +132,17 @@
     },
     {
       "name": "Random Repo",
-      "description": "Aplicación que explora repositorios de GitHub al azar, utilizando caché con Redis para evitar exceso de llamadas a la API",
+      "description": "Aplicación que explora repositorios de GitHub al azar por lenguaje de programación, utilizando caché con Redis para evitar exceso de llamadas a la API",
       "finished": true,
-      "keywords": ["TypeScript", "React", "Node", "Tailwind", "Redis"],
+      "keywords": [
+        "Redis",
+        "TypeScript",
+        "Node",
+        "Python",
+        "Flask",
+        "React",
+        "Tailwind"
+      ],
       "url": "https://github.com/ehdlg/github-random-repository"
     }
   ],
