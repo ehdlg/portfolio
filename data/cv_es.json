@@ -38,9 +38,7 @@
       "startDate": "Nov 2023",
       "endDate": "Feb 2024",
       "highlights": [
-        "Desempeñé un papel clave en el desarrollo de una aplicación web desde cero con React y TypeScript, creando una herramienta Pomodoro para mejorar la gestión del tiempo.",
-        "Diseñé y ejecuté estrategias de testing robustas, garantizando la fiabilidad y el rendimiento mediante test unitarios, de integración y E2E (Vitest, Playwright, React Testing Library)",
-        "Utilicé Astro, Tailwind CSS, Docker, Storybook, Vitest y Playwright, creando un entorno de prueba para experimentar y aprender nuevas herramientas que optimizaron el desarrollo y mejoraron la calidad del proyecto."
+        "Desempeñé un papel clave en el desarrollo de una herramienta Pomodoro desde cero utilizando React y TypeScript, donde implementé estrategias de testing robustas con Vitest, Playwright y React Testing Library para asegurar la fiabilidad y el rendimiento. Además, utilicé tecnologías como Astro, Tailwind CSS y Docker, creando un entorno de prueba que facilitó la experimentación y optimizó el desarrollo del proyecto."
       ],
       "company": "Aircury",
       "position": "Desarollador Frontend Prácticas"
