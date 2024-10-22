@@ -95,13 +95,13 @@
         "Tailwind"
       ],
       "name": "Notas de entrega",
-      "description": "Herramienta para gestionar notas de entrega en un negocio familiar.",
+      "description": "Herramienta para gestionar notas de entrega en un negocio familiar",
       "finished": true,
       "url": "https://github.com/ehdlg/delivery-notes"
     },
     {
       "name": "groc",
-      "description": "Proyecto diseñado para ayudar a los usuarios a manejar su tiempo con la técnica pomodoro.",
+      "description": "Proyecto diseñado para ayudar a los usuarios a manejar su tiempo con la técnica pomodoro",
       "finished": false,
       "keywords": [
         "TypeScript",
@@ -118,10 +118,24 @@
     },
     {
       "name": "shrinker",
-      "description": "URL shortening service",
+      "description": "Servicio de acortamiento de URLs",
       "keywords": ["Angular", "Express", "Node", "SQLite", "Tailwind"],
       "finished": true,
       "url": "https://github.com/ehdlg/shrlinker"
+    },
+    {
+      "name": "task-tracker",
+      "description": "Herramienta CLI hecha en Python para manejar tus tareas",
+      "finished": true,
+      "url": "https://github.com/ehdlg/task-tracker",
+      "keywords": ["Python", "PyPI"]
+    },
+    {
+      "name": "Random Repo",
+      "description": "Aplicación que explora repositorios de GitHub al azar, utilizando caché con Redis para evitar exceso de llamadas a la API",
+      "finished": true,
+      "keywords": ["TypeScript", "React", "Node", "Tailwind", "Redis"],
+      "url": "https://github.com/ehdlg/github-random-repository"
     }
   ],
   "awards": [
