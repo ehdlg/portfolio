@@ -1,0 +1,77 @@
+---
+const INPUT_TEXT_STYLES =
+  "w-full rounded border border-neutral-200 bg-inherit p-4 outline-none drop-shadow-sm transition duration-150 ease-in text-xl text-neutral-800 dark:text-neutral-200 focus:border-indigo-500 dark:border-neutral-800 placeholder:text-neutral-500";
+
+let formSent = false;
+
+if (Astro.request.method === "POST") {
+  try {
+    // const data = await Astro.request.formData();
+
+    // const name = data.get("name");
+    // const email = data.get("email");
+    // const message = data.get("message");
+
+    console.log("akslj");
+    formSent = true;
+
+    return Astro.rewrite("/#contact");
+  } catch (error) {
+    console.error(error);
+  } finally {
+  }
+}
+---
+
+<section class="mb-8" id="contact">
+  <div class="mb-4 flex flex-col gap-y-2">
+    <h2 class="text-2xl font-bold text-neutral-700 dark:text-neutral-300">
+      Contacto
+    </h2>
+    {
+      formSent && (
+        <span class="text-sm font-bold text-green-500/80">
+          Mensaje enviado. Gracias!
+        </span>
+      )
+    }
+  </div>
+
+  <form method="POST" class="flex w-full flex-col items-center gap-y-3">
+    <input
+      type="text"
+      name="name"
+      placeholder="Nombre"
+      id=""
+      class={INPUT_TEXT_STYLES}
+      required
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="Correo"
+      id=""
+      class={INPUT_TEXT_STYLES}
+      required
+    />
+    <textarea
+      name="message"
+      id=""
+      placeholder="Escribe tu mensaje"
+      class="min-h-[200px] w-full rounded border border-neutral-200 bg-inherit p-4 text-xl outline-none drop-shadow-sm transition-colors duration-150 ease-in placeholder:text-neutral-500 focus:border-indigo-500 dark:border-neutral-800"
+      required></textarea>
+    <button
+      type="submit"
+      class="self-start rounded border border-neutral-200 px-6 py-3 text-xl text-neutral-600 outline-none drop-shadow-sm transition duration-150 ease-in hover:border-transparent hover:bg-indigo-300 hover:text-neutral-200 hover:drop-shadow-none focus:border-indigo-500 focus:text-neutral-200 dark:border-neutral-800 dark:text-neutral-400 dark:hover:bg-indigo-600 dark:hover:text-neutral-200 focus:dark:text-neutral-200"
+      >Enviar</button
+    >
+  </form>
+</section>
+
+<script>
+  const form = document.querySelector("form");
+
+  form?.addEventListener("suubmit", () => {
+    window.location.href = "/#contact";
+  });
+</script>
