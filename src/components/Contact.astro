@@ -1,24 +1,60 @@
 ---
-const INPUT_TEXT_STYLES =
-  "w-full rounded border border-neutral-200 bg-inherit p-4 outline-none drop-shadow-sm transition duration-150 ease-in text-xl text-neutral-800 dark:text-neutral-200 focus:border-indigo-500 dark:border-neutral-800 placeholder:text-neutral-500";
+import nodemailer from "nodemailer";
+import ContactInput from "@components/elements/ContactInput.astro";
+import { type Props as Input } from "@components/elements/ContactInput.astro";
 
-let formSent = false;
+//TODO add notification after submitting form
+
+const INPUTS: Input[] = [
+  {
+    name: "name",
+    placeholder: "Nombre",
+    type: "text",
+  },
+  {
+    name: "email",
+    placeholder: "Email",
+    type: "email",
+  },
+  {
+    name: "subject",
+    placeholder: "Asunto",
+    type: "text",
+  },
+];
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: import.meta.env.VITE_EMAIL,
+    pass: import.meta.env.VITE_PASSWORD,
+  },
+});
 
 if (Astro.request.method === "POST") {
   try {
-    // const data = await Astro.request.formData();
+    const data = await Astro.request.formData();
 
-    // const name = data.get("name");
-    // const email = data.get("email");
-    // const message = data.get("message");
+    const message = data.get("message")?.toString();
+    const name = data.get("name")?.toString();
+    const email = data.get("email")?.toString();
+    const subject = data.get("subject")?.toString();
+    const htmlText = `<h3>Message from: ${name} - ${email}</h3>
+                      <p>${message}</p>`;
 
-    console.log("akslj");
-    formSent = true;
+    const mailOptions = {
+      from: email,
+      to: import.meta.env.VITE_EMAIL,
+      subject,
+      html: htmlText,
+    };
 
-    return Astro.rewrite("/#contact");
+    transporter.sendMail(mailOptions, (error) => {
+      if (error) return;
+
+      console.log("Email sent");
+    });
   } catch (error) {
     console.error(error);
-  } finally {
   }
 }
 ---
@@ -28,32 +64,10 @@ if (Astro.request.method === "POST") {
     <h2 class="text-2xl font-bold text-neutral-700 dark:text-neutral-300">
       Contacto
     </h2>
-    {
-      formSent && (
-        <span class="text-sm font-bold text-green-500/80">
-          Mensaje enviado. Gracias!
-        </span>
-      )
-    }
   </div>
 
   <form method="POST" class="flex w-full flex-col items-center gap-y-3">
-    <input
-      type="text"
-      name="name"
-      placeholder="Nombre"
-      id=""
-      class={INPUT_TEXT_STYLES}
-      required
-    />
-    <input
-      type="email"
-      name="email"
-      placeholder="Correo"
-      id=""
-      class={INPUT_TEXT_STYLES}
-      required
-    />
+    {INPUTS.map((input) => <ContactInput {...input} />)}
     <textarea
       name="message"
       id=""
@@ -63,15 +77,7 @@ if (Astro.request.method === "POST") {
     <button
       type="submit"
       class="self-start rounded border border-neutral-200 px-6 py-3 text-xl text-neutral-600 outline-none drop-shadow-sm transition duration-150 ease-in hover:border-transparent hover:bg-indigo-300 hover:text-neutral-200 hover:drop-shadow-none focus:border-indigo-500 focus:text-neutral-200 dark:border-neutral-800 dark:text-neutral-400 dark:hover:bg-indigo-600 dark:hover:text-neutral-200 focus:dark:text-neutral-200"
-      >Enviar</button
-    >
+      >Enviar
+    </button>
   </form>
 </section>
-
-<script>
-  const form = document.querySelector("form");
-
-  form?.addEventListener("suubmit", () => {
-    window.location.href = "/#contact";
-  });
-</script>
