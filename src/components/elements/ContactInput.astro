@@ -1,0 +1,17 @@
+---
+export interface Props {
+  type: "text" | "email";
+  name: string;
+  placeholder: string;
+}
+
+const { type, name, placeholder } = Astro.props;
+---
+
+<input
+  type={type}
+  name={name}
+  placeholder={placeholder}
+  class="w-full rounded border border-neutral-200 bg-inherit p-4 text-xl text-neutral-800 outline-none drop-shadow-sm transition duration-150 ease-in placeholder:text-neutral-500 focus:border-indigo-500 dark:border-neutral-800 dark:text-neutral-200"
+  required
+/>
