@@ -8,4 +8,5 @@ export default defineConfig({
   integrations: [tailwind()],
   site: "https://ehdlg.github.io",
   base: "portfolio",
+  output: "server",
 });
