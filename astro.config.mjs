@@ -9,7 +9,7 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   integrations: [tailwind()],
   site: "https://ehdlg.github.io",
-  base: "portfolio",
+  base: ".",
   output: "server",
   adapter: vercel(),
 });

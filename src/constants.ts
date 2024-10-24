@@ -1,1 +1,1 @@
-export const BASE_URL = "/portfolio";
+export const BASE_URL = ".";
