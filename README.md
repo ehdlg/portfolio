@@ -6,4 +6,4 @@ accessibility.
 
 This is a work in progress.
 
-Live preview [**here**](https://ehdlg.github.io/portfolio/)
+Live preview [**here**](https://portfolio-gilt-pi-53.vercel.app/)
