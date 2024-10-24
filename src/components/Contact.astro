@@ -1,9 +1,6 @@
 ---
-import nodemailer from "nodemailer";
 import ContactInput from "@components/elements/ContactInput.astro";
 import { type Props as Input } from "@components/elements/ContactInput.astro";
-
-//TODO add notification after submitting form
 
 const INPUTS: Input[] = [
   {
@@ -22,41 +19,6 @@ const INPUTS: Input[] = [
     type: "text",
   },
 ];
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: import.meta.env.VITE_EMAIL,
-    pass: import.meta.env.VITE_PASSWORD,
-  },
-});
-
-if (Astro.request.method === "POST") {
-  try {
-    const data = await Astro.request.formData();
-
-    const message = data.get("message")?.toString();
-    const name = data.get("name")?.toString();
-    const email = data.get("email")?.toString();
-    const subject = data.get("subject")?.toString();
-    const htmlText = `<h3>Message from: ${name} - ${email}</h3>
-                      <p>${message}</p>`;
-
-    const mailOptions = {
-      from: email,
-      to: import.meta.env.VITE_EMAIL,
-      subject,
-      html: htmlText,
-    };
-
-    transporter.sendMail(mailOptions, (error) => {
-      if (error) return;
-
-      console.log("Email sent");
-    });
-  } catch (error) {
-    console.error(error);
-  }
-}
 ---
 
 <section class="mb-8" id="contact">
@@ -66,7 +28,11 @@ if (Astro.request.method === "POST") {
     </h2>
   </div>
 
-  <form method="POST" class="flex w-full flex-col items-center gap-y-3">
+  <form
+    method="POST"
+    action="/portfolio/contact"
+    class="flex w-full flex-col items-center gap-y-3"
+  >
     {INPUTS.map((input) => <ContactInput {...input} />)}
     <textarea
       name="message"

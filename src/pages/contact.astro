@@ -1,0 +1,52 @@
+---
+import nodemailer from "nodemailer";
+import Layout from "@layouts/Layout.astro";
+import Main from "@components/Main.astro";
+import ThanksComponent from "@components/Thanks.astro";
+
+if (Astro.request.method !== "POST") return Astro.redirect("/portfolio");
+
+let success: boolean;
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: import.meta.env.VITE_EMAIL,
+    pass: import.meta.env.VITE_PASSWORD,
+  },
+});
+
+try {
+  const data = await Astro.request.formData();
+
+  const message = data.get("message")?.toString();
+  const name = data.get("name")?.toString();
+  const email = data.get("email")?.toString();
+  const subject = data.get("subject")?.toString();
+  const htmlText = `<h3>Message from: ${name} - ${email}</h3>
+                      <p>${message}</p>`;
+
+  const mailOptions = {
+    from: email,
+    to: import.meta.env.VITE_EMAIL,
+    subject,
+    html: htmlText,
+  };
+
+  transporter.sendMail(mailOptions, (error) => {
+    if (error) return (success = false);
+  });
+
+  success = true;
+} catch (error) {
+  success = false;
+
+  console.error(error);
+}
+---
+
+<Layout title="Portfolio de Enrique Hidalgo, Desarollador y Programador Web">
+  <Main>
+    {success ? <ThanksComponent /> : <h2>There was an error</h2>}
+  </Main>
+</Layout>
