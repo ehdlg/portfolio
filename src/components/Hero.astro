@@ -1,14 +1,11 @@
 ---
 import Badge from "./elements/HeroBadge.astro";
-import SocialLink from "./elements/SocialLink.astro";
-import GitHubIcon from "@icons/GitHub.astro";
-import LinkedInIcon from "@icons/LinkedIn.astro";
-import MailIcon from "@icons/Mail.astro";
 import {
   linkedin as linkedinLink,
   github as githubLink,
   mail as mailLink,
 } from "@data/links.json";
+import ContactLinks from "./elements/ContactLinks.astro";
 ---
 
 <section>
@@ -31,22 +28,6 @@ import {
     <p>Valoro la constancia, la curiosidad y el aprendizaje continuo.</p>
   </div>
   <div class="mt-2 flex items-center gap-x-1">
-    <SocialLink
-      href={linkedinLink}
-      ariaLabel="Ir al LinkedIn de Enrique Hidalgo"
-    >
-      <LinkedInIcon class="size-7" />
-    </SocialLink>
-    <SocialLink
-      href={githubLink}
-      ariaLabel="Ir a la página de GitHub de Enrique Hidalgo"
-    >
-      <GitHubIcon class="size-7" />
-    </SocialLink>
-    <SocialLink
-      href={mailLink}
-      ariaLabel="Enviar un correo electrónico a Enrique Hidalgo"
-      ><MailIcon class="size-7" /></SocialLink
-    >
+    <ContactLinks />
   </div>
 </section>

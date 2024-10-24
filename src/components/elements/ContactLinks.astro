@@ -1,0 +1,27 @@
+---
+import SocialLink from "@components/elements/SocialLink.astro";
+import LinkedInIcon from "@icons/LinkedIn.astro";
+import GitHubIcon from "@/icons/GitHub.astro";
+import MailIcon from "@/icons/Mail.astro";
+
+import {
+  linkedin as linkedinLink,
+  github as githubLink,
+  mail as mailLink,
+} from "@data/links.json";
+---
+
+<SocialLink href={linkedinLink} ariaLabel="Ir al LinkedIn de Enrique Hidalgo">
+  <LinkedInIcon class="size-8" />
+</SocialLink>
+<SocialLink
+  href={githubLink}
+  ariaLabel="Ir a la página de GitHub de Enrique Hidalgo"
+>
+  <GitHubIcon class="size-8" />
+</SocialLink>
+<SocialLink
+  href={mailLink}
+  ariaLabel="Enviar un correo electrónico a Enrique Hidalgo"
+  ><MailIcon class="size-8" /></SocialLink
+>
