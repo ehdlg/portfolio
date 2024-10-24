@@ -3,8 +3,9 @@ import nodemailer from "nodemailer";
 import Layout from "@layouts/Layout.astro";
 import Main from "@components/Main.astro";
 import ThanksComponent from "@components/Thanks.astro";
+import { BASE_URL } from "@/constants";
 
-if (Astro.request.method !== "POST") return Astro.redirect("/portfolio");
+if (Astro.request.method !== "POST") return Astro.redirect(BASE_URL);
 
 let success: boolean;
 

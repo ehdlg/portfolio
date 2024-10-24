@@ -1,5 +1,6 @@
 ---
 import ContactInput from "@components/elements/ContactInput.astro";
+import { BASE_URL } from "@/constants";
 import { type Props as Input } from "@components/elements/ContactInput.astro";
 
 const INPUTS: Input[] = [
@@ -19,6 +20,7 @@ const INPUTS: Input[] = [
     type: "text",
   },
 ];
+const actionUrl = `${BASE_URL}/contact`;
 ---
 
 <section class="mb-8" id="contact">
@@ -30,7 +32,7 @@ const INPUTS: Input[] = [
 
   <form
     method="POST"
-    action="/portfolio/contact"
+    action={actionUrl}
     class="flex w-full flex-col items-center gap-y-3"
   >
     {INPUTS.map((input) => <ContactInput {...input} />)}
