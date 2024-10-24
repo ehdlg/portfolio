@@ -2,13 +2,14 @@
 import nodemailer from "nodemailer";
 import Layout from "@layouts/Layout.astro";
 import Main from "@components/Main.astro";
-import ThanksComponent from "@components/Thanks.astro";
+import NotificationWrapper from "@components/NotificationWrapper.astro";
+import SuccessfulContact from "@components/SuccessfulContact.astro";
+import ErrorContact from "@components/ErrorContact.astro";
 import { BASE_URL } from "@/constants";
 
 if (Astro.request.method !== "POST") return Astro.redirect(BASE_URL);
 
 let success: boolean;
-
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -34,9 +35,7 @@ try {
     html: htmlText,
   };
 
-  transporter.sendMail(mailOptions, (error) => {
-    if (error) return (success = false);
-  });
+  await transporter.sendMail(mailOptions);
 
   success = true;
 } catch (error) {
@@ -44,10 +43,14 @@ try {
 
   console.error(error);
 }
+
+console.log(success);
 ---
 
 <Layout title="Portfolio de Enrique Hidalgo, Desarollador y Programador Web">
   <Main>
-    {success ? <ThanksComponent /> : <h2>There was an error</h2>}
+    <NotificationWrapper>
+      {success ? <SuccessfulContact /> : <ErrorContact />}
+    </NotificationWrapper>
   </Main>
 </Layout>
