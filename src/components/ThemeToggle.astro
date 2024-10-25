@@ -1,0 +1,22 @@
+---
+import { ELEMENT_ID } from "@/constants";
+---
+
+<div>
+  <input
+    type="checkbox"
+    name="toggle-dark"
+    id={ELEMENT_ID.THEME}
+    class="invisible absolute"
+  />
+  <label
+    for="toggle-dark"
+    class="relative flex h-9 w-16 cursor-pointer items-center rounded-full border p-2"
+  >
+    <div
+      class="absolute left-[3px] h-7 w-7 rounded-full bg-gradient-to-br from-indigo-400 to-indigo-500 transition ease-in"
+      id={ELEMENT_ID.KNOB}
+    >
+    </div>
+  </label>
+</div>
