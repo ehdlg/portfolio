@@ -1,4 +1,5 @@
 ---
+import ThemeToggle from "./ThemeToggle.astro";
 import { BASE_URL } from "@/constants";
 type NavElement = {
   href: string;
@@ -36,7 +37,7 @@ const NAV_ELEMENTS: NavElement[] = [
     </span>
   </a>
   <nav>
-    <ul class="flex gap-x-8">
+    <ul class="flex items-center gap-x-8">
       {
         NAV_ELEMENTS.map((element) => (
           <li class="text-normal text-neutral-600 transition duration-150 ease-in hover:text-neutral-800 focus:text-neutral-800 dark:text-neutral-400 hover:dark:text-neutral-200 dark:focus:text-neutral-200">
@@ -45,16 +46,23 @@ const NAV_ELEMENTS: NavElement[] = [
         ))
       }
       <li>
-        <button type="button" id="toggle-theme"> Dark/Light </button>
+        <ThemeToggle />
       </li>
     </ul>
   </nav>
 </header>
 
-<script is:inline>
-  const toggleButton = document.querySelector("#toggle-theme");
+<script>
+  import { ELEMENT_ID, THEMES } from "@/constants";
+  const toggleDark = document.getElementById(ELEMENT_ID.THEME);
+  const toggleKnob = document.getElementById(ELEMENT_ID.KNOB);
 
-  toggleButton.addEventListener("click", () => {
+  toggleDark?.addEventListener("click", () => {
+    toggleKnob?.classList.toggle("translate-x-7");
     document.documentElement.classList.toggle("dark");
+
+    const isDark = document.documentElement.classList.contains("dark");
+
+    localStorage.setItem("theme", isDark ? THEMES.DARK : THEMES.LIGHT);
   });
 </script>
