@@ -1,17 +1,10 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Main from "@components/Main.astro";
-import Hero from "@components/Hero.astro";
-import Projects from "@components/Projects.astro";
-import Experience from "@/components/Experience.astro";
-import Contact from "@components/Contact.astro";
----
+import { defaultLang, ui } from "@i18n/ui";
 
-<Layout title="Portfolio de Enrique Hidalgo, Desarollador y Programador Web">
-  <Main>
-    <Hero />
-    <Projects />
-    <Experience />
-    <Contact />
-  </Main>
-</Layout>
+const preferedLang = Astro.preferredLocale;
+
+if (null != preferedLang && preferedLang in ui)
+  return Astro.redirect(`/${preferedLang}`);
+
+return Astro.redirect(`/${defaultLang}`);
+---
