@@ -12,20 +12,20 @@ type NavElement = {
 
 const NAV_ELEMENTS: NavElement[] = [
   {
-    href: `${BASE_URL}`,
+    href: `${BASE_URL}/${lang}`,
     text: t("nav.home"),
   },
   {
     href: `${BASE_URL}#projects`,
-    text: "Proyectos",
+    text: t("nav.projects"),
   },
   {
     href: "#experience",
-    text: "Experiencia",
+    text: t("nav.experience"),
   },
   {
     href: "#contact",
-    text: "Contacto",
+    text: t("nav.contact"),
   },
 ];
 ---
@@ -33,7 +33,7 @@ const NAV_ELEMENTS: NavElement[] = [
 <header
   class="sticky top-0 z-50 my-6 flex w-full justify-between bg-inherit py-6"
 >
-  <a href={BASE_URL}>
+  <a href={`${BASE_URL}/${lang}`}>
     <span
       class="inline-block cursor-pointer bg-gradient-to-r from-indigo-500 to-indigo-400 bg-clip-text text-center text-xl font-bold text-transparent"
     >
