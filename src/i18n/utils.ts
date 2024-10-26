@@ -1,14 +1,4 @@
-export const languages = {
-  es: "Español",
-  en: "English",
-};
-
-export const defaultLang = "es";
-
-export const ui: Record<keyof typeof languages, Record<string, string>> = {
-  es: {},
-  en: {},
-};
+import { ui, defaultLang } from "./ui";
 
 export function getLangFromUrl(url: URL) {
   const [, lang] = url.pathname.split("/");
