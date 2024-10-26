@@ -5,9 +5,8 @@ export const languages = {
   es: "Español",
   en: "English",
 };
-
 export const defaultLang = "es";
-export const ui: Record<keyof typeof languages, Record<string, string>> = {
+export const ui = {
   es,
   en,
 };
