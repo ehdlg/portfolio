@@ -8,7 +8,8 @@
       "@icons/*": ["src/icons/*"],
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
-      "@data/*": ["data/*"]
+      "@data/*": ["data/*"],
+      "@i18n/*": ["src/i18n/*"]
     }
   }
 }
