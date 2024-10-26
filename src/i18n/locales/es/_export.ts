@@ -1,5 +1,9 @@
+import { projects as cvProjects } from "@data/cv_es.json";
 import nav from "@i18n/locales/es/nav.json";
 import layout from "@i18n/locales/es/layout.json";
 import hero from "@i18n/locales/es/hero.json";
+import jsonProjects from "@i18n/locales/es/projects.json";
 
-export default { ...layout, ...nav, ...hero } as const;
+const projects = { ...jsonProjects, "projects.projects": cvProjects };
+
+export default { ...layout, ...nav, ...hero, ...projects } as const;
