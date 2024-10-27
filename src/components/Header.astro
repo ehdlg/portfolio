@@ -13,19 +13,19 @@ type NavElement = {
 const NAV_ELEMENTS: NavElement[] = [
   {
     href: `${BASE_URL}/${lang}`,
-    text: t("nav.home"),
+    text: t("nav.home") as string,
   },
   {
     href: `${BASE_URL}#projects`,
-    text: t("nav.projects"),
+    text: t("nav.projects") as string,
   },
   {
     href: "#experience",
-    text: t("nav.experience"),
+    text: t("nav.experience") as string,
   },
   {
     href: "#contact",
-    text: t("nav.contact"),
+    text: t("nav.contact") as string,
   },
 ];
 ---
