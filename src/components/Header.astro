@@ -2,6 +2,7 @@
 import ThemeToggle from "./ThemeToggle.astro";
 import { BASE_URL } from "@/constants";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { languages } from "@i18n/ui";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -48,6 +49,18 @@ const NAV_ELEMENTS: NavElement[] = [
             <a href={element.href}>{element.text}</a>
           </li>
         ))
+      }
+
+      {
+        Object.entries(languages).map(([language, icon]) => {
+          if (lang === language) return;
+
+          return (
+            <li>
+              <a href={`/${language}`}>{icon}</a>
+            </li>
+          );
+        })
       }
       <li>
         <ThemeToggle />
