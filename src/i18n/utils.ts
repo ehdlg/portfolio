@@ -14,6 +14,8 @@ export function useTranslations(lang: keyof typeof ui) {
   };
 }
 
-export function checkLangSupport(lang: string) {
+export function checkLangSupport(url: URL) {
+  const [, lang] = url.pathname.split("/");
+
   return lang in ui;
 }
