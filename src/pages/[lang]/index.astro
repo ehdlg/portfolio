@@ -5,6 +5,12 @@ import Hero from "@components/Hero.astro";
 import Projects from "@components/Projects.astro";
 import Experience from "@components/Experience.astro";
 import Contact from "@components/Contact.astro";
+import { checkLangSupport } from "@/i18n/utils";
+import { BASE_URL } from "@/constants";
+
+const isLangSupported = checkLangSupport(Astro.url);
+
+if (!isLangSupported) return Astro.redirect(BASE_URL);
 ---
 
 <Layout>
