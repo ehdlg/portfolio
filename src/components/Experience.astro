@@ -1,13 +1,18 @@
 ---
-import { work as EXPERIENCE } from "@data/cv_es.json";
+import { work } from "@data/cv.json";
 import ExperienceDetails from "./ExperienceDetails.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const experience: typeof work = t("experience.work");
 ---
 
 <section id="experience">
   <h2 class="mb-4 text-2xl font-bold text-neutral-700 dark:text-neutral-300">
-    Experiencia
+    {t("experience.title")}
   </h2>
   <ol class="relative mx-2 border-s border-neutral-200 dark:border-neutral-800">
-    {EXPERIENCE.map((work) => <ExperienceDetails {...work} />)}
+    {experience.map((job) => <ExperienceDetails {...job} />)}
   </ol>
 </section>
