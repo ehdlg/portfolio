@@ -4,5 +4,9 @@
   "contact.placeholder-email": "Email",
   "contact.placeholder-subject": "Asunto",
   "contact.placeholder-message": "Escribe tu mensaje",
-  "contact.button": "Enviar"
+  "contact.button": "Enviar",
+  "contact.success-title": "Mensaje enviado. ¡Gracias!",
+  "contact.success-message": "Me pondré en contacto contigo lo antes posible",
+  "contact.error-title": "Hubo un error al intentar enviar el mensaje",
+  "contact.error-message": "Intentalo de nuevo o prueba a ponerte en contacto conmigo a través de las siguentes redes:"
 }
