@@ -5,7 +5,7 @@ import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const experience: typeof work = t("experience.work");
+const experience = t("experience.work") as typeof work;
 ---
 
 <section id="experience">
