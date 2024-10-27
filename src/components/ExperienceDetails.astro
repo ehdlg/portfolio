@@ -1,4 +1,6 @@
 ---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
 interface Props {
   startDate: string;
   endDate: string | null;
@@ -9,6 +11,9 @@ interface Props {
 }
 
 const { startDate, company, endDate, highlights, position } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <li class="mb-10 ms-4">
@@ -18,7 +23,7 @@ const { startDate, company, endDate, highlights, position } = Astro.props;
   </div>
   <time
     class="mb-1 text-sm font-normal leading-none text-neutral-400 dark:text-neutral-500"
-    >{startDate} - {endDate ? endDate : "Presente"}</time
+    >{startDate} - {endDate ? endDate : t("experience.current")}</time
   >
   <h3 class="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
     {position}

@@ -1,0 +1,165 @@
+{
+  "selectedTemplate": 6,
+  "headings": {
+    "skills": "Skills",
+    "projects": "Projects",
+    "awards": "",
+    "education": "Education",
+    "work": "Experience"
+  },
+  "basics": {
+    "name": "Enrique Hidalgo Pérez",
+    "email": "enriqueh147@gmail.com",
+    "location": {
+      "address": "Granada, ES"
+    },
+    "website": "github.com/ehdlg"
+  },
+  "education": [
+    {
+      "location": "Granada, ES",
+      "startDate": "Sept 2021",
+      "endDate": "Jun 2024",
+      "institution": "IES Aguadulce",
+      "area": "Higher Degree in Web Application Development"
+    },
+    {
+      "institution": "University of Granada",
+      "location": "Granada, ES",
+      "area": "Psychology",
+      "startDate": "Sep 2017",
+      "endDate": "Sep 2021"
+    }
+  ],
+  "work": [
+    {
+      "location": "Granada, ES",
+      "website": "",
+      "startDate": "Nov 2023",
+      "endDate": "Feb 2024",
+      "highlights": [
+        "Played a key role in developing a Pomodoro tool from scratch using React and TypeScript, where I implemented robust testing strategies with Vitest, Playwright, and React Testing Library to ensure reliability and performance. Additionally, I utilized technologies such as Astro, Tailwind CSS, and Docker, creating a testing environment that facilitated experimentation and optimized project development."
+      ],
+      "company": "Aircury",
+      "position": "Frontend Developer Intern"
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": ["JavaScript", "TypeScript", "HTML/CSS", "Java"],
+      "name": "Programming Languages"
+    },
+    {
+      "keywords": ["React", "Angular", "Express", "Astro", "Spring Boot"],
+      "name": "Frameworks/Libraries"
+    },
+    {
+      "keywords": [
+        "Docker",
+        "Jest/Vitest",
+        "Playwright",
+        "Tailwind CSS",
+        "Storybook",
+        "Sequelize",
+        "Git"
+      ],
+      "name": "Tools and Technologies"
+    },
+    {
+      "keywords": ["MySQL", "PostgreSQL", "SQLite", "MongoDB"],
+      "name": "Databases"
+    },
+    {
+      "keywords": ["Spanish - Native", "English - B2"],
+      "name": "Languages"
+    }
+  ],
+  "projects": [
+    {
+      "url": "https://github.com/ehdlg/tienlocal",
+      "keywords": ["Node", "Express", "React", "JWT", "MySQL"],
+      "name": "TienLocal",
+      "description": "Simulation project that promotes local businesses. Allows businesses to register and upload products, while users can explore and purchase",
+      "finished": true
+    },
+    {
+      "keywords": [
+        "TypeScript",
+        "Express",
+        "React",
+        "Sequelize",
+        "SQLite",
+        "Tailwind"
+      ],
+      "name": "Delivery Notes",
+      "description": "Tool for managing delivery notes in a family business",
+      "finished": true,
+      "url": "https://github.com/ehdlg/delivery-notes"
+    },
+    {
+      "name": "groc",
+      "description": "Project designed to help users manage their time using the Pomodoro technique",
+      "finished": false,
+      "keywords": [
+        "TypeScript",
+        "Astro",
+        "React",
+        "Tailwind",
+        "Docker",
+        "Storybook",
+        "Vitest",
+        "Playwright",
+        "i18n",
+        "CI/CD"
+      ],
+      "url": "https://github.com/sergih28/groc"
+    },
+    {
+      "name": "shrlinker",
+      "description": "URL shortening service",
+      "keywords": ["Angular", "Express", "Node", "SQLite", "Tailwind"],
+      "finished": true,
+      "url": "https://github.com/ehdlg/shrlinker"
+    },
+    {
+      "name": "task-tracker",
+      "description": "CLI tool made in Python for managing your tasks",
+      "finished": true,
+      "url": "https://github.com/ehdlg/task-tracker",
+      "keywords": ["Python", "PyPI"]
+    },
+    {
+      "name": "Random Repo",
+      "description": "Application that explores random GitHub repositories by programming language, using Redis cache to avoid excessive API calls",
+      "finished": true,
+      "keywords": [
+        "Redis",
+        "TypeScript",
+        "Node",
+        "Python",
+        "Flask",
+        "React",
+        "Tailwind"
+      ],
+      "url": "https://github.com/ehdlg/github-random-repository"
+    }
+  ],
+  "awards": [
+    {
+      "title": "",
+      "date": "",
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "work",
+    "education",
+    "skills",
+    "projects",
+    "awards"
+  ]
+}

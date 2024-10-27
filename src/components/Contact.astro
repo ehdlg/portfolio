@@ -2,31 +2,36 @@
 import ContactInput from "@components/elements/ContactInput.astro";
 import { BASE_URL } from "@/constants";
 import { type Props as Input } from "@components/elements/ContactInput.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { defaultLang } from "@/i18n/ui";
+
+const lang = getLangFromUrl(Astro.url) || defaultLang;
+const t = useTranslations(lang);
 
 const INPUTS: Input[] = [
   {
     name: "name",
-    placeholder: "Nombre",
+    placeholder: t("contact.placeholder-name") as string,
     type: "text",
   },
   {
     name: "email",
-    placeholder: "Email",
+    placeholder: t("contact.placeholder-email") as string,
     type: "email",
   },
   {
     name: "subject",
-    placeholder: "Asunto",
+    placeholder: t("contact.placeholder-subject") as string,
     type: "text",
   },
 ];
-const actionUrl = `${BASE_URL}/contact`;
+const actionUrl = `${BASE_URL}/${lang}/contact`;
 ---
 
 <section class="mb-8" id="contact">
   <div class="mb-4 flex flex-col gap-y-2">
     <h2 class="text-2xl font-bold text-neutral-700 dark:text-neutral-300">
-      Contacto
+      {t("contact.title")}
     </h2>
   </div>
 
@@ -39,13 +44,13 @@ const actionUrl = `${BASE_URL}/contact`;
     <textarea
       name="message"
       id=""
-      placeholder="Escribe tu mensaje"
+      placeholder={t("contact.placeholder-message") as string}
       class="min-h-[200px] w-full rounded border border-neutral-200 bg-inherit p-4 text-xl outline-none drop-shadow-sm transition-colors duration-150 ease-in placeholder:text-neutral-500 focus:border-indigo-500 dark:border-neutral-800"
       required></textarea>
     <button
       type="submit"
       class="self-start rounded border border-neutral-200 px-6 py-3 text-xl text-neutral-600 outline-none drop-shadow-sm transition duration-150 ease-in hover:border-transparent hover:bg-indigo-300 hover:text-neutral-200 hover:drop-shadow-none focus:border-indigo-500 focus:text-neutral-200 dark:border-neutral-800 dark:text-neutral-400 dark:hover:bg-indigo-600 dark:hover:text-neutral-200 focus:dark:text-neutral-200"
-      >Enviar
+      >{t("contact.button")}
     </button>
   </form>
 </section>

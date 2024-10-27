@@ -1,6 +1,10 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
 import { BASE_URL } from "@/constants";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 type NavElement = {
   href: string;
   text: string;
@@ -8,28 +12,28 @@ type NavElement = {
 
 const NAV_ELEMENTS: NavElement[] = [
   {
-    href: `${BASE_URL}`,
-    text: "Inicio",
+    href: `${BASE_URL}/${lang}`,
+    text: t("nav.home") as string,
   },
   {
     href: `${BASE_URL}#projects`,
-    text: "Proyectos",
+    text: t("nav.projects") as string,
   },
   {
     href: "#experience",
-    text: "Experiencia",
+    text: t("nav.experience") as string,
   },
   {
     href: "#contact",
-    text: "Contacto",
+    text: t("nav.contact") as string,
   },
 ];
 ---
 
 <header
-  class="sticky top-0 z-50 my-6 flex w-full justify-between bg-inherit py-8"
+  class="sticky top-0 z-50 my-6 flex w-full justify-between bg-inherit py-6"
 >
-  <a href={BASE_URL}>
+  <a href={`${BASE_URL}/${lang}`}>
     <span
       class="inline-block cursor-pointer bg-gradient-to-r from-indigo-500 to-indigo-400 bg-clip-text text-center text-xl font-bold text-transparent"
     >

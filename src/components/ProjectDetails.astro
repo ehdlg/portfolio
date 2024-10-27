@@ -1,6 +1,7 @@
 ---
 import TechBadge from "@components/elements/TechBadge.astro";
 import InProgressBadge from "./elements/InProgressBadge.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 interface Props {
   title: string;
@@ -10,6 +11,8 @@ interface Props {
   finished: boolean;
 }
 const { title, description, stack, url, finished } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <a href={url} target="_blank">
@@ -20,7 +23,7 @@ const { title, description, stack, url, finished } = Astro.props;
       <h4 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
         {title}
       </h4>
-      {!finished && <InProgressBadge />}
+      {!finished && <InProgressBadge>{t("projects.badge")}</InProgressBadge>}
     </div>
 
     <p

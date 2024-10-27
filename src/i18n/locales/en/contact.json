@@ -1,0 +1,12 @@
+{
+  "contact.title": "Contact",
+  "contact.placeholder-name": "Name",
+  "contact.placeholder-email": "Email",
+  "contact.placeholder-subject": "Subject",
+  "contact.placeholder-message": "Write your message",
+  "contact.button": "Send",
+  "contact.success-title": "Message sent. Thanks!",
+  "contact.success-message": "I'll get in contact with you as soon as possible",
+  "contact.error-title": "There was an error trying to send the message",
+  "contact.error-message": "Try again later or contact me these social media channels:"
+}

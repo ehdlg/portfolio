@@ -1,31 +1,25 @@
 ---
 import Badge from "./elements/HeroBadge.astro";
-import {
-  linkedin as linkedinLink,
-  github as githubLink,
-  mail as mailLink,
-} from "@data/links.json";
+import { linkedin as linkedinLink } from "@data/links.json";
 import ContactLinks from "./elements/ContactLinks.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const heroInfo = t("hero.info") as string[];
 ---
 
 <section>
   <div
     class="mb-6 flex items-center gap-x-2 text-neutral-700 dark:text-neutral-300"
   >
-    <h1 class="text-5xl font-bold">¡Hola! 👋</h1>
+    <h1 class="text-5xl font-bold">{t("hero.greeting")} 👋</h1>
     <Badge href={linkedinLink} ariaLabel="Ir al LinkedIn de Enrique Hidalgo"
-      >Disponible para trabajar</Badge
+      >{t("hero.badge")}</Badge
     >
   </div>
   <div class="text-xl leading-loose">
-    <p>
-      Soy <b>Enrique</b>, desarrollador web de Granada.
-    </p>
-    <p>
-      Interesado en bases de datos, interfaces minimalistas, experiencia de
-      usuario y desarrollo de videojuegos.
-    </p>
-    <p>Valoro la constancia, la curiosidad y el aprendizaje continuo.</p>
+    {heroInfo.map((htmlInfo: string) => <p set:html={htmlInfo} />)}
   </div>
   <div class="mt-2 flex items-center gap-x-1">
     <ContactLinks />

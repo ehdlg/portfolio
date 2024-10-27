@@ -1,6 +1,13 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <h2 class="text-4xl text-neutral-800 dark:text-neutral-200">
-  Mensaje enviado. ¡Gracias!
+  {t("contact.success-title")}
 </h2>
 <p class="text-lg text-neutral-500">
-  Me pondré en contacto contigo lo antes posible
+  {t("contact.success-message")}
 </p>
