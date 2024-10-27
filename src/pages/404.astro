@@ -1,3 +1,5 @@
 ---
-return Astro.redirect(`/`);
+import { BASE_URL } from "@/constants";
+
+return Astro.redirect(BASE_URL);
 ---
