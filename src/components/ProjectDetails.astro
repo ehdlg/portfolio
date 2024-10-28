@@ -20,7 +20,9 @@ const t = useTranslations(lang);
     class="flex min-h-[300px] flex-col flex-wrap gap-y-2 rounded border border-neutral-200 p-4 shadow-sm transition duration-200 ease-linear hover:border-indigo-400 md:min-h-[200px] md:gap-0 dark:border-neutral-800"
   >
     <div class="mb-2 flex items-center justify-between gap-x-4">
-      <h4 class="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
+      <h4
+        class="text-lg font-semibold text-neutral-700 md:text-xl dark:text-neutral-300"
+      >
         {title}
       </h4>
       {!finished && <InProgressBadge>{t("projects.badge")}</InProgressBadge>}
