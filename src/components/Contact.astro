@@ -30,7 +30,9 @@ const actionUrl = `${BASE_URL}/${lang}/contact`;
 
 <section class="mb-8" id="contact">
   <div class="mb-4 flex flex-col gap-y-2">
-    <h2 class="text-2xl font-bold text-neutral-700 dark:text-neutral-300">
+    <h2
+      class="text-xl font-bold text-neutral-700 md:text-2xl dark:text-neutral-300"
+    >
       {t("contact.title")}
     </h2>
   </div>
@@ -43,13 +45,12 @@ const actionUrl = `${BASE_URL}/${lang}/contact`;
     {INPUTS.map((input) => <ContactInput {...input} />)}
     <textarea
       name="message"
-      id=""
       placeholder={t("contact.placeholder-message") as string}
-      class="min-h-[200px] w-full rounded border border-neutral-200 bg-inherit p-4 text-xl outline-none drop-shadow-sm transition-colors duration-150 ease-in placeholder:text-neutral-500 focus:border-indigo-500 dark:border-neutral-800"
+      class="text-normal min-h-[200px] w-full rounded border border-neutral-200 bg-inherit p-4 outline-none drop-shadow-sm transition-colors duration-150 ease-in placeholder:text-neutral-500 focus:border-indigo-500 sm:text-lg md:text-xl dark:border-neutral-800"
       required></textarea>
     <button
       type="submit"
-      class="self-start rounded border border-neutral-200 px-6 py-3 text-xl text-neutral-600 outline-none drop-shadow-sm transition duration-150 ease-in hover:border-transparent hover:bg-indigo-300 hover:text-neutral-200 hover:drop-shadow-none focus:border-indigo-500 focus:text-neutral-200 dark:border-neutral-800 dark:text-neutral-400 dark:hover:bg-indigo-600 dark:hover:text-neutral-200 focus:dark:text-neutral-200"
+      class="text-normal self-start rounded border border-neutral-200 px-6 py-3 text-neutral-600 outline-none drop-shadow-sm transition duration-150 ease-in hover:border-transparent hover:bg-indigo-300 hover:text-neutral-200 hover:drop-shadow-none focus:border-indigo-500 focus:text-neutral-200 sm:text-lg md:text-xl dark:border-neutral-800 dark:text-neutral-400 dark:hover:bg-indigo-600 dark:hover:text-neutral-200 focus:dark:text-neutral-200"
       >{t("contact.button")}
     </button>
   </form>

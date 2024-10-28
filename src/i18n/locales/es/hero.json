@@ -2,7 +2,7 @@
   "hero.greeting": "¡Hola!",
   "hero.badge": "Disponible para trabajar",
   "hero.info": [
-    "Soy Enrique, desarollador web de Granada.",
+    "Soy <b>Enrique</b>, desarollador web de Granada.",
     "Interesado en bases de datos, interfaces minimalistas, experiencia de usuario y desarollo de videojuegos",
     "Valoro la constancia, la curiosidad y el aprendizaje continuo"
   ]

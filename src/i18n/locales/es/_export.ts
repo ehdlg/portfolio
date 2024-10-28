@@ -5,6 +5,7 @@ import hero from "@i18n/locales/es/hero.json";
 import jsonProjects from "@i18n/locales/es/projects.json";
 import contact from "@i18n/locales/es/contact.json";
 import jsonExperience from "@i18n/locales/es/experience.json";
+import accessibility from "@i18n/locales/es/accessibility.json";
 
 const projects = { ...jsonProjects, "projects.projects": cvProjects };
 const experience = { ...jsonExperience, "experience.work": work };
@@ -16,4 +17,5 @@ export default {
   ...projects,
   ...contact,
   ...experience,
+  ...accessibility,
 } as const;

@@ -33,7 +33,7 @@ const NAV_ELEMENTS: NavElement[] = [
 ---
 
 <header
-  class="sticky top-0 z-50 my-6 flex w-full justify-between bg-inherit py-6"
+  class="sticky top-0 z-50 my-6 flex w-full flex-wrap justify-between bg-inherit py-6"
 >
   <a href={`${BASE_URL}/${lang}`}>
     <span
@@ -43,10 +43,10 @@ const NAV_ELEMENTS: NavElement[] = [
     </span>
   </a>
   <nav>
-    <ul class="flex items-center gap-x-8">
+    <ul class="flex items-center gap-x-4 sm:gap-x-8">
       {
         NAV_ELEMENTS.map((element) => (
-          <li class="text-normal text-neutral-600 transition duration-150 ease-in hover:text-neutral-800 focus:text-neutral-800 dark:text-neutral-400 hover:dark:text-neutral-200 dark:focus:text-neutral-200">
+          <li class="text-normal hidden text-neutral-600 transition duration-150 ease-in hover:text-neutral-800 focus:text-neutral-800 sm:block dark:text-neutral-400 hover:dark:text-neutral-200 dark:focus:text-neutral-200">
             <a href={element.href}>{element.text}</a>
           </li>
         ))
