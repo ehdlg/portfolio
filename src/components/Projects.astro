@@ -21,6 +21,7 @@ const projects = t("projects.projects") as typeof cvProject;
     <a
       href={repositoriesLink}
       target="_blank"
+      aria-label={t("accessibility.github-projects-link") as string}
       class="flex items-center justify-center gap-x-2 text-neutral-600 transition duration-150 ease-in hover:text-neutral-900 dark:text-neutral-400 hover:dark:text-neutral-200"
       >{t("projects.more-projects")} <GitHubIcon class="size-4" />
     </a>
