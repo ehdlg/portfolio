@@ -2,7 +2,6 @@
 import ThemeToggle from "./ThemeToggle.astro";
 import { BASE_URL } from "@/constants";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import { languages } from "@i18n/ui";
 import LanguagePicker from "./LanguagePicker.astro";
 
 const lang = getLangFromUrl(Astro.url);
@@ -18,7 +17,7 @@ const NAV_ELEMENTS: NavElement[] = [
     text: t("nav.home") as string,
   },
   {
-    href: `${BASE_URL}#projects`,
+    href: `#projects`,
     text: t("nav.projects") as string,
   },
   {
