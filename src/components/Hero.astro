@@ -13,8 +13,9 @@ const heroInfo = t("hero.info") as string[];
   <div
     class="mb-6 flex flex-wrap items-center gap-x-2 gap-y-2 text-neutral-700 dark:text-neutral-300"
   >
-    <h1 class="text-2xl font-bold sm:text-4xl md:text-5xl">
-      {t("hero.greeting")} 👋
+    <h1 class="flex text-2xl font-bold sm:text-4xl md:text-5xl">
+      {t("hero.greeting")}
+      <span id="greeting-emoji">👋</span>
     </h1>
     <Badge
       href={linkedinLink}
@@ -31,3 +32,34 @@ const heroInfo = t("hero.info") as string[];
     <ContactLinks />
   </div>
 </section>
+
+<style is:inline>
+  @keyframes greeting {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    20% {
+      transform: rotate(15deg);
+    }
+
+    40% {
+      transform: rotate(-15deg);
+    }
+
+    60% {
+      transform: rotate(15deg);
+    }
+
+    80% {
+      transform: rotate(-15deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  #greeting-emoji {
+    animation: greeting 0.75s ease-in-out 0.5s 1;
+  }
+</style>
