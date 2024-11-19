@@ -116,6 +116,13 @@
       "url": "https://github.com/sergih28/groc"
     },
     {
+      "keywords": ["React Native", "Expo", "TypeScript"],
+      "name": "PsyReport",
+      "description": "Mobile app that simplifies self-monitoring in therapy, making it easier for users to complete self-reports and providing therapists with more accurate data by reducing barriers compared to paper-based formats",
+      "finished": false,
+      "url": "https://www.github.com/ehdlg/psyreport"
+    },
+    {
       "name": "shrlinker",
       "description": "URL shortening service",
       "keywords": ["Angular", "Express", "Node", "SQLite", "Tailwind"],
@@ -128,21 +135,6 @@
       "finished": true,
       "url": "https://github.com/ehdlg/task-tracker",
       "keywords": ["Python", "PyPI"]
-    },
-    {
-      "name": "Random Repo",
-      "description": "Application that explores random GitHub repositories by programming language, using Redis cache to avoid excessive API calls",
-      "finished": true,
-      "keywords": [
-        "Redis",
-        "TypeScript",
-        "Node",
-        "Python",
-        "Flask",
-        "React",
-        "Tailwind"
-      ],
-      "url": "https://github.com/ehdlg/github-random-repository"
     }
   ],
   "awards": [
