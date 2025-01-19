@@ -17,6 +17,9 @@ importers:
       '@astrojs/vercel':
         specifier: ^7.8.2
         version: 7.8.2(astro@5.0.0-beta.5(@types/node@22.7.9)(rollup@4.24.0)(typescript@5.6.3))
+      '@fontsource-variable/nunito':
+        specifier: ^5.1.1
+        version: 5.1.1
       astro:
         specifier: 5.0.0-beta.5
         version: 5.0.0-beta.5(@types/node@22.7.9)(rollup@4.24.0)(typescript@5.6.3)
@@ -423,6 +426,9 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/nunito@5.1.1':
+    resolution: {integrity: sha512-o4VVGDO/q2KaQp7aU6iKmKQ7sbalUOeA/D9nxY+o80ga/IV+7i+Yb/CpqNxAwjAWVhgdE2UiQlpsc38+j47ekw==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -2752,6 +2758,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.24.0':
     optional: true
+
+  '@fontsource-variable/nunito@5.1.1': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
