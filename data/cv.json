@@ -125,7 +125,7 @@
     {
       "name": "shrlinker",
       "description": "URL shortening service",
-      "keywords": ["Angular", "Express", "Node", "SQLite", "Tailwind"],
+      "keywords": ["Node", "Express", "SQLite", "Angular","Turso", "Tailwind"],
       "finished": true,
       "url": "https://github.com/ehdlg/shrlinker"
     },
