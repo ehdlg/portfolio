@@ -34,7 +34,19 @@
   "work": [
     {
       "location": "Granada, ES",
-      "website": "",
+      "website": "https://www.aircury.com/ai-agent",
+      "startDate": "Feb 2025",
+      "endDate": "",
+      "highlights": [
+        "I contribute in a key way to the development of AI agents with various integrations for an internal artificial intelligence project, including Google, GitHub, code execution agents, and an internal RAG system using LangChain and LangGraph. I designed and implemented a large part of the backend authentication system, using JWT, API Keys, and OAuth, based on the OpenAI API model. Additionally, I defined the initial database structure and main models, establishing a solid foundation for the continuous development of agents and services. Currently, I collaborate on the integration of the corporate chatbot frontend developed with Next.js and React, incorporating the AI agents into the user experience."
+      ],
+
+      "company": "Aircury",
+      "position": "Backend & AI Engineer"
+    },
+    {
+      "location": "Granada, ES",
+      "website": "https://www.aircury.com/",
       "startDate": "Nov 2023",
       "endDate": "Feb 2024",
       "highlights": [
@@ -125,7 +137,7 @@
     {
       "name": "shrlinker",
       "description": "URL shortening service",
-      "keywords": ["Node", "Express", "SQLite", "Angular","Turso", "Tailwind"],
+      "keywords": ["Node", "Express", "SQLite", "Angular", "Turso", "Tailwind"],
       "finished": true,
       "url": "https://github.com/ehdlg/shrlinker"
     },

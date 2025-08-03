@@ -35,6 +35,18 @@
     {
       "location": "Granada, ES",
       "website": "",
+      "startDate": "Feb 2025",
+      "endDate": "",
+      "highlights": [
+        "Contribuyo de manera clave en el desarrollo de agentes de IA con diversas integraciones para un proyecto interno de inteligencia artificial, incluyendo Google, GitHub, agentes de código y un sistema RAG interno con LangChain y LangGraph. Diseñé e implementé gran parte del sistema de autenticación backend, utilizando JWT, API Keys y OAuth, basado en el modelo de la API de OpenAI. Asimismo, definí la estructura inicial de la base de datos y los modelos principales, lo que estableció una base sólida para el desarrollo continuo de agentes y servicios. Actualmente, colaboro en la integración del frontend del chatbot corporativo desarrollado con Next.js y React, incorporando los agentes de IA en la experiencia de usuario."
+      ],
+
+      "company": "Aircury",
+      "position": "Backend & AI Engineer"
+    },
+    {
+      "location": "Granada, ES",
+      "website": "",
       "startDate": "Nov 2023",
       "endDate": "Feb 2024",
       "highlights": [

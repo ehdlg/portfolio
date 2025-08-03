@@ -2,8 +2,8 @@
   "hero.greeting": "Hello!",
   "hero.badge": "Available for work",
   "hero.info": [
-    "I'm <b>Enrique</b>, web developer from Granada, Spain.",
-    "Interested in databases, minimalist interfaces, user experience, behavioral science and game development.",
+    "I'm <b>Enrique</b>, software developer from Granada, Spain.",
+    "Interested in databases, AI, minimalist interfaces, user experience, behavioral science and game development.",
     "I value consistency, curiosity, and continuous learning."
   ]
 }
